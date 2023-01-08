@@ -40,6 +40,10 @@ const cartSlice = createSlice({
         state.amount -= 1;
       }
     },
+    uploadCart: (state, action) => {
+      state.amount = action.payload.amount;
+      state.productList = action.payload.productList;
+    },
   },
 });
 
